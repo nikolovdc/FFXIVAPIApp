@@ -4,11 +4,15 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require("path");
 const cors = require('cors');
-const routes = require('./routes');
+//const routes = require('./routes');
 
 
 const app = express();
 const port = 6003;
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+
+
 
 // Set up session
 app.use(session({
@@ -30,7 +34,11 @@ app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
 app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 
 // Mount routes
-app.use('/', routes);
+//app.use('/', routes);
+
+app.get('/', (req, res) => {
+	res.render('main');
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

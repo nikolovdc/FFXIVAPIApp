@@ -1,0 +1,21 @@
+{
+  "name": "FFXIVAPIWEB",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "multer": "^1.4.5-lts.1",
+    "web-vitals": "^2.1.4",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "scripts": {
+    "start": "node server/server.js "
+  }
+}
