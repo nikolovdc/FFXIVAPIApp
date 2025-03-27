@@ -19,11 +19,10 @@ app.use(express.static("public"));
 // set up sql
 
 const db = mysql.createConnection({
-  host: '127.0.0.0',
-  user: 'youruser',
-  password: 'yourpassword',
-  database: "E_COM",
-  port: 3306, 
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'root6666',
+  port: 3306,
 });
 
 db.connect( (error) => {

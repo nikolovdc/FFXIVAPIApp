@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "rich-chimera-455016-u7",
+  "private_key_id": "2664c15e9640262e892c112736e8fc3ce003dcca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC6QwOFSND+Ijc8\nYDVNsV3qQ/GBitWQHXdLBTgMVFp4uKdEk2KDLeWjo7Gyub9z8dXdNf8hnDssxAmm\n3vIfCMpLjO5oUK/1dkPydBEUEDY+3Zh+H+yllOUXyRP/xVqsb4rBlhAktebMAG3z\n83KoMFwKuKLDWo48dW593pu/vrNJ76j3SQ7L4an2lc3dzPdGmOAG/h63LZkduzIX\nx+1P4h66Tko0NIucs+GsiQCVZezHrvsmi3vrDC+NuFCcLp7zr7A4NeRFj2gxfpDM\nsbeVLEau4K+905KGENkIHScXXxiTYwjZh1uv+Q17E5G+lVzB/FgAlmqFpL+Lgu7F\nzkROy27vAgMBAAECggEABH+/4wVKPwk2ilfMkc7Z9OGlQLrIw81iZ0Z9/xY+hTH4\noFhrBb4jENvQW//Olw9dWhWGzxoF9+PYU9aIxKUitcZ2r8BbL7OmmoGhM/ncRZJ2\nr3036xv4mKV7vS7YLNgY4uosA6b9JypPfZgAyf05C+0/yTYzv1Qa0iGBY5VIoV2E\n/anwtZgcEas/oK9jwq2FnmrBlW+/McUXOq1wQMSIq68R+uiWGD0O+56WIchzDVxa\n/dk0j6a/U3IB0kzzCUtzXIxTk+wiCj4bJom0hUQNvQZSR4RQaHRHKE17/6kss3zr\nO6s1wfSjwZnK6bPWzU2Zg0Q0zSIkG3hyOZi1MahcgQKBgQDx1Il0UB5Lrd/c5Abt\nAqEkzYcTzKVL0rv7eoPWvYpV9u9uNOEjTNkzGEQFh+bGeOEHIjht4QaT3/jlECjA\nvxPS87Guau2B2+sL7SvhoSE6blGM0dnWX4Wfw15Ia/Aegi6Z2E+50N3WCdxli+68\nK/TI84N6Fid6fBvZmF1HiX+AQQKBgQDFLPKlZNQUaiKRaTHViNBixkLOuc1A6zau\nzvebTxpCqdxoNeUddvcbyoPEfnGXipMH4BFUu7NMFQgmcYnGjh88MkrxFWIG8M1Z\nwH8IvM3q7PDtQenmErQKHVghRit7VaxP3By31qH5dxw+jb0GSKnKvyvVNkAZ8bf9\nuLEPy1ojLwKBgA1F2gl9QDxtHaVVCqBFjaykby6CA+yGc3TZA5Vsr8QKGpgU5Op4\nFE++nDUlgWARUGCA21IEkMTa/SEtYt85XZAteeoVylVfSaZM7SSkIFvBpE4zUl52\nvbHIGkulSPeTs5UUD0Qml5Zg0izsojzHuNayrturjZ0mZKzrtOrxPANBAoGAOfCd\nVNCuKVmO0t/wjujnIz9TPmAG2n7D0NZsmCzEcLZtWAoOS3w73OTDl6f4RSmpTvUe\n4qFNbJv5iyJt8/SrZQr6TqGT7qowDaGtMqoYcGIz4eQukTcJxLcewJhYCqQAQG9T\n2QmvCxlfKVqJIyGTE0rd3IdWiskm4d212ghNcm0CgYBE6ltonLv8cHlY8uMJCbFu\nV49YoIUAafJYpx/OWMZW9H3srVw8uLpW2zeANnOhdHO9c37ylej+fRaAv3RmgM55\n9AKf+45er5XJ/02n01mrwZfRlrTYix1uo+uOVwwmawstuhlOBr3wfQXri64FUvuo\noJSXQ8wcOTic3KwQpetQnA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "quickstart-service-account@rich-chimera-455016-u7.iam.gserviceaccount.com",
+  "client_id": "115525062193747655877",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/quickstart-service-account%40rich-chimera-455016-u7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
