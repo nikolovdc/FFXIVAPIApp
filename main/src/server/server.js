@@ -4,9 +4,11 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require("path");
 const cors = require('cors');
-//const routes = require('./routes');
 const dotenv = require('dotenv');
+const { exec } = require("child_process");
+const mysql = require('mysql');
 
+//const routes = require('./routes');
 dotenv.config({path: './.env'})
 
 const app = express();
@@ -15,12 +17,13 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 // set up sql
-const mysql = require('mysql')
+
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: process.env.DATABASE
+  host: '127.0.0.0',
+  user: 'youruser',
+  password: 'yourpassword',
+  database: "E_COM",
+  port: 3306, 
 });
 
 db.connect( (error) => {
