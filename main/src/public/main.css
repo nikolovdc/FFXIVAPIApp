@@ -67,7 +67,7 @@ input {
 }
 
 
-button[type=submit] {
+buttonr[type=submit] {
     margin: 20px;
     background-color:#125779;
     color: white;
