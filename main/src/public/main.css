@@ -1,3 +1,81 @@
-body {
-    background-color: lightblue;
+@font-face {
+    font-family: apple;
+    src: url(fonts/AppleGaramond-Light.ttf);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   margin: 0px;
+}
+
+#header {
+    font-family: apple;
+    color: #125779;
+    background-color: #b5e0e6;
+    padding: 5px 5px 5px 20px;
+}
+
+#signin {
+    text-align: right;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #125779;
+}
+
+li a:hover{
+    color: rgb(162, 150, 255);
+    text-decoration: none;
+}
+
+#create-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+button[type=submit] {
+    margin: 20px;
+    background-color:#125779;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+
