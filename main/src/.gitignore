@@ -1,0 +1,4 @@
+node_module/
+server/key.json
+server/cloud-sql-proxy
+server/cloud-sql-proxy.exe
