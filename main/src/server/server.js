@@ -4,13 +4,35 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require("path");
 const cors = require('cors');
-//const routes = require('./routes');
+const dotenv = require('dotenv');
+const { exec } = require("child_process");
+const mysql = require('mysql');
 
+//const routes = require('./routes');
+dotenv.config({path: './.env'})
 
 const app = express();
 const port = 6003;
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+
+// set up sql
+
+const db = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'root6666',
+  port: 6003,
+});
+
+db.connect( (error) => {
+  if (error) {
+    console.log(error);
+  }
+  else {
+    console.log("MySQL is connected!!!");
+  }
+})
 
 
 
@@ -43,3 +65,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
+
+app.get('/create', (req, res) => {
+  res.render("create");
+})
