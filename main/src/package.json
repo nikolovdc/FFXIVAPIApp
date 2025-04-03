@@ -21,6 +21,7 @@
     "webpack-bundle-analyzer": "^4.10.2"
   },
   "scripts": {
-    "start": "node start.js && node server/server.js "
+    "server": "node database/start.js",
+    "start": "node server/server.js"
   }
 }
