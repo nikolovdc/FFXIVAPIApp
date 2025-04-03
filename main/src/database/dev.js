@@ -3,19 +3,19 @@ require('dotenv').config();
 
 function isProxyRunningLinux() {
     try {
-        // Check for running Cloud SQL Proxy process
-		const output = execSync('pgrep -f "cloud-sql-proxy" | grep -v $$ || true').toString().trim();
-		console.log("This is the output of whether proxy is running: ", output);
+		const output = execSync('pgrep "cloud-sql-proxy"').toString().trim();
+		console.log("This is the output of whether proxy is running: \n", output);
 		return output.length > 0;
     } catch (error) {
         return false; // No process found
     }
 }
 
+
 function isProxyRunningWindows() {
 	try {
         // Check for running Cloud SQL Proxy process
-		const output = execSync('tasklist | findstr /I "cloud-sql-proxy.exe" || exit 0', { stdio: 'pipe' }).toString().trim();
+		const output = execSync('tasklist | findstr /l "cloud-sql-proxy.exe" || exit 0', { stdio: 'pipe' }).toString().trim();
 		console.log("This is the output of whether proxy is running: ", output);
 		return output.length > 0;
     } catch (error) {
@@ -35,7 +35,7 @@ function startServer() {
         return;
 	} else {
 		const command = isLinux ? 
-			`nohup ${proxyPath} --credentials-file="${credsPath}" "${connectionName}" > proxy.log 2>&1 &` :
+			`nohup ${proxyPath} --credentials-file="${credsPath}" "${connectionName}" > database/proxy.log 2>&1 &` :
 			`start "" "${proxyPath}" --credentials-file="${credsPath}" ${connectionName}`;
 		exec(command, (error, stdout, stderr) => {
 			if (error) {
