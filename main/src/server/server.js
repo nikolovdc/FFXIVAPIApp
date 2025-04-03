@@ -66,6 +66,11 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
 
+app.get('/login', (req, res) => {
+  res.render("login");
+})
+
 app.get('/create', (req, res) => {
   res.render("create");
 })
+
