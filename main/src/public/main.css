@@ -9,17 +9,33 @@
 
 body {
    margin: 0px;
+   font-family: apple;
 }
 
 #header {
+    width: 100%;
+    font-size: larger;
     font-family: apple;
     color: #125779;
     background-color: #b5e0e6;
-    padding: 5px 5px 5px 20px;
+    margin: 0px;
+    padding: 5px 5px 0px 20px;
+    display: inline-flex;
 }
 
 #signin {
-    text-align: right;
+    font-size: large;
+    margin-top: 50px;
+    position: absolute;
+    right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #125779;
 }
 
 li {
@@ -33,19 +49,42 @@ li a {
 }
 
 li a:hover{
-    color: rgb(162, 150, 255);
+    color: #39a9bb;
     text-decoration: none;
 }
+
+#nav {
+    font-size: larger;
+    background-color: #dce5d3;
+    padding: 10px;
+}
+
+#nav li {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 1px solid #a0c081;
+}
+
+#nav a:hover {
+    color: #39a9bb;
+}
+
+.createAcc {
+    color: #4692b9be;
+    margin: 20px;
+    padding: 5px;
+    border-bottom: 2px solid lightblue;
+    width: 20%;
+}   
 
 #create-form {
 	display: flex;
 	flex-direction: column;
-	margin:  0;
+	margin: 20px;
 	max-width: 300px;
 	align-content: center;
-	padding: 10px;
-    
-	
+	padding: 15px;
+    background-color: #d0ebef;
 }
 
 label {
@@ -71,5 +110,3 @@ button[type=submit] {
     cursor: pointer;
     float: right;
 }
-
-
