@@ -2,3 +2,6 @@ node_modules/
 server/key.json
 server/cloud-sql-proxy
 server/cloud-sql-proxy.exe
+nohup.out
+database/proxy.log
+proxy.log
