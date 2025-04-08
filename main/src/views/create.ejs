@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFXIV API App</title>
+    <link rel="stylesheet" href="../main.css">
+	<script src="../services/registerPanel.js" type="module"></script>
+</head>
+<body>
+</body>
+	<div id="header">
+	</div>
+	<div id="nav"></div>
+	<div id="main-contents">
+        <div id="create-form">
+            <form action="/auth/create" id="register-form" method="post">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="user123@gmail.com..."/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="15"/>
+                </div>
+				<div class="form-group">
+					<label for="username">User Name</label>
+					<input type="text" class="form-control" id="username" name="username" placeholder="User Name"/>
+				</div>
+                <button type="submit" class="submitBtn">Register Account</button>
+            </form>
+        </div>
+    </div>
+	<div id="footer">
+    </div>
+</html>
