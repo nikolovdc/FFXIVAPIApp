@@ -18,6 +18,10 @@ router.get('/create', (req, res) => {
 	res.render("create");
 });
 
+router.get('/login', (req, res) => {
+	res.render("login");
+})
+
 // GET Route that renders the login page
 
 
