@@ -115,7 +115,7 @@ button[type=submit] {
     margin: 10px;
 }
 
-#taskBullets li {
+.taskList li {
     margin: 10px 0px;
     width: 20%;
     padding: 12px 8px;
@@ -128,16 +128,16 @@ button[type=submit] {
     cursor: pointer;
 }
 
-#taskBullets li:hover {
+.taskList li:hover {
     background: #ddd;
 }
 
-#taskBullets li.checked {
+.taskList li.checked {
     background: lightblue;
     text-decoration: line-through;
 }
 
-.close {
+.taskList .close {
     cursor: pointer;
     color: #888;
     font-size: 20px;
@@ -146,7 +146,7 @@ button[type=submit] {
     position: static;
 }
 
-.close:hover {
+.taskList .close:hover {
     color: red;
 }
 
@@ -155,7 +155,7 @@ button[type=submit] {
     pointer-events: none;
 }
 
-#taskBullets li.checked::before {
+.taskList li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -168,23 +168,23 @@ button[type=submit] {
     width: 7px;
 }
   
-.close {
+.taskList .close {
     position: absolute;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
 }
   
-.close:hover {
+.taskList .close:hover {
     color: white;
 }
 
-input {
-    margin: 0;
+#tasks input {
+    margin: 0px;
     width: 20%;
     border: none;
     border-radius: 0;
-    padding: 10px;
+    padding: 20px;
     float: top;
     font-size: 16px;
 }
