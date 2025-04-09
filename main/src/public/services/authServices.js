@@ -7,9 +7,9 @@ import api from './config/apiConfig.js';
  * @param { string } pw - used to validate user's password
  * @return { Promise<Object> || Error } Return user data or throw errors accordingly
  */
-const loginValidate = async (email, pw) => {
+const loginValidate = async (email, password) => {
   try {
-	const response = await api.post('/auth/login', { email, pw });
+	const response = await api.post('/auth/login', { email, password });
 	if (response.data) {
 	  return response.data;
 	} else {
@@ -38,7 +38,7 @@ const registerUser = async (newUser) => {
 	if (error.response.status === 409) {
 	  throw new Error('Email already in use, try logging in or retrieving password/accountName');
 	}
-	throw error;
+	return null;
   }
 };
 

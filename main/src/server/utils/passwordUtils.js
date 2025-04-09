@@ -3,8 +3,7 @@ const bcrypt = require('bcryptjs');
 
 const hashPassword = async (password) => {
   const salt = await bcrypt.genSalt(10);
-  console.log("This is the password inside the hashPassword: ", password);
-  return bcrypt.hash(password, salt);
+  return bcrypt.hash(password, salt).toString();
 };
 
   // Utility function to compare passwords
