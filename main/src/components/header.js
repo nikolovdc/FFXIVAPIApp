@@ -25,8 +25,8 @@ function Header(headerEle) {
 	authDiv.id = "signin";
 	authDiv.innerHTML = `
 		<ul>
-			<li><a href="/login">Login</a></li>
-			<li><a href="/create">Create Account</a></li>
+			<li><a href="/auth/login">Login</a></li>
+			<li><a href="/auth/create">Create Account</a></li>
 		</ul>`;
 	headerEle.appendChild(title);
 	headerEle.appendChild(authDiv);

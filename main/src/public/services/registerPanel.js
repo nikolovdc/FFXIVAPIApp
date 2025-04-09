@@ -1,7 +1,7 @@
 //public/services/registerPanel.js
 import { registerUser } from './authServices.js';
 
-function CreateRegisterPanel() {
+async function CreateRegisterPanel() {
 	const registerForm = document.getElementById("register-form");
 
 	//Assign event listener for the register form
@@ -13,8 +13,9 @@ function CreateRegisterPanel() {
 	  const password = document.getElementById("password").value;
 	  const email = document.getElementById("email").value;
 	  const newUser = { username, password, email };
-	  registerUser(newUser);  
+	  const result = await registerUser(newUser);
+	  if (result)  
 });
 };
 
-CreateRegisterPanel();
+document.addEventListener("DOMContentLoaded", (e) => CreateRegisterPanel());
