@@ -13,6 +13,7 @@ router.post('/login', userLogin);
 // POST Route to handle customer register requests
 router.post('/create', userRegister);
 
+
 // GET Route that renders the register page
 router.get('/create', (req, res) => {
 	res.render("create");
@@ -22,6 +23,9 @@ router.get('/login', (req, res) => {
 	res.render("login");
 })
 
+router.get('/tasks', (req, res) => {
+	res.render("main");
+})
 // GET Route that renders the login page
 
 
