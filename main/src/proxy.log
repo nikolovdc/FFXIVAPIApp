@@ -1,5 +1,0 @@
-2025/04/09 12:01:14 Authorizing with the credentials file at "./server/key.json"
-2025/04/09 12:01:15 [rich-chimera-455016-u7:us-central1:root] Listening on 127.0.0.1:3306
-2025/04/09 12:01:15 The proxy has started successfully and is ready for new connections!
-2025/04/09 12:01:52 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:47610
-2025/04/09 12:02:21 [rich-chimera-455016-u7:us-central1:root] client closed the connection
