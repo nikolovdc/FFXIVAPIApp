@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FFXIV API App</title>
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../modal.css">
 	<script src="../services/registerPanel.js" type="module"></script>
 </head>
 <body>
-</body>
 	<div id="header"></div>
+    <div id="modal-overlay"></div>
 	<div id="main-contents">
-        <div id="modal-overlay"></div>
         <h2 class="createAcc">Create Account</h2>
         <div id="create-form">
             <form action="/auth/create" id="register-form" method="post">
@@ -33,4 +33,5 @@
         </div>
     </div>
 	<div id="footer"></div>
+</body>
 </html>

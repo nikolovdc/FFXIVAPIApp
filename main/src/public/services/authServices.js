@@ -13,11 +13,10 @@ const loginValidate = async (email, password) => {
 	if (response.data) {
 	  return response.data;
 	} else {
-	  throw new Error(response.data.error);
+	  return new Error(response.data.error.message);
 	}
   } catch (error) {
-	console.error('User login error:', error.message);
-	throw error;
+	return new Error("User login error occured! ", { cause: error });
   }
 };
 
@@ -31,14 +30,19 @@ const registerUser = async (newUser) => {
   const password = newUser.password;
   const email = newUser.email;
   try {  
-	await api.post('/auth/create', { username, password, email });
-	return username;
-  } catch (error) {
-	console.error('User register error:', error);
-	if (error.response.status === 409) {
-	  throw new Error('Email already in use, try logging in or retrieving password/accountName');
+	const response = await api.post('/auth/create', { username, password, email });
+	console.log("This is the response inside registerUser: ", response);
+	if (response.data) {
+		return response.data;
+	} else {
+		return new Error(response.data.error.message);
 	}
-	return null;
+  } catch (error) {
+	if (error.response.status === 409) {
+	  return new Error('Email already in use, try logging in or retrieving password/accountName', { cause: error });
+	} else {
+		return new Error("An error occured! ", { cause: error });
+	}
   }
 };
 

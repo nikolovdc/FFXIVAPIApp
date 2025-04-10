@@ -11,7 +11,8 @@ function CreateLoginPanel() {
 	  //Grabbing all the values from the form
 	  const email = document.getElementById("emailInputLog").value;
 	  const password = document.getElementById("passLog").value;
-	  loginValidate(email, password);  
+	  const result = loginValidate(email, password);
+	    
 	});
 };
 
