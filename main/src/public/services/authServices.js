@@ -16,7 +16,7 @@ const loginValidate = async (email, password) => {
 	  return new Error(response.data.error.message);
 	}
   } catch (error) {
-	return new Error("User login error occured! ", { cause: error });
+	return new Error(`User login error occured! ${error}`, { cause: error });
   }
 };
 
@@ -31,7 +31,6 @@ const registerUser = async (newUser) => {
   const email = newUser.email;
   try {  
 	const response = await api.post('/auth/create', { username, password, email });
-	console.log("This is the response inside registerUser: ", response);
 	if (response.data) {
 		return response.data;
 	} else {
@@ -39,9 +38,9 @@ const registerUser = async (newUser) => {
 	}
   } catch (error) {
 	if (error.response.status === 409) {
-	  return new Error('Email already in use, try logging in or retrieving password/accountName', { cause: error });
+	  return new Error('Email already in use, try logging in or resetting password.', { cause: error });
 	} else {
-		return new Error("An error occured! ", { cause: error });
+		return new Error(`User register error occured! ${error}`, { cause: error });
 	}
   }
 };

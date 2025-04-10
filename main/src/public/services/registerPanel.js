@@ -17,7 +17,7 @@ function CreateRegisterPanel() {
 	  const result = await registerUser(newUser);
 	  console.log("This is the result", result);
 	  if (result instanceof Error) {
-		BuildModal({ title: "Register Error", children: `${result.message} Please try again!` });
+		BuildModal({ title: "Register Error", children: `${result.message}` });
 	  }  
 	});
 };
