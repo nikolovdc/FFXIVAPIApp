@@ -1,9 +1,10 @@
 // src/server/routes/authRoutes.js
 const express = require('express');
 const cors = require('cors');
-const { userLogin, userRegister } = require('../controllers/authControllers');
 const app = express();
 const router = express.Router();
+
+const { userLogin, userRegister } = require('../controllers/authControllers');
 
 app.use(cors({ origin: 'http://localhost:6003' }));
 
@@ -18,13 +19,10 @@ router.get('/create', (req, res) => {
 	res.render("create");
 });
 
+// GET Route that renders the login page
 router.get('/login', (req, res) => {
 	res.render("login");
-})
-
-// GET Route that renders the login page
-
-
+});
 
 module.exports = router;
 

@@ -2,33 +2,20 @@
 
 /**
  * BuildHeader 
- * Builds a consistent header, include userProfile/Authentication section, logo, 
- * and other TBD elements  
+ * Builds a consistent header, include logo, 
+ * auth section, and user icon.  
  */
-function BuildHeader() {
-	const headerEle = document.getElementById("header");
-	const logoDiv = document.createElement("div");
-	logoDiv.className = "logo";
-	headerEle.appendChild(logoDiv);
-	const userProfileDiv = document.createElement("div");
-	userProfileDiv.id = "auth-section";
-	headerEle.appendChild(userProfileDiv);
-};
-
-
-function AuthSection(headerEle) {
-	const authDiv = document.createElement('div');
-	authDiv.id = "signin";
-	authDiv.innerHTML = `
-		<ul>
-			<li><a href="/auth/login">Login</a></li>
-			<li><a href="/auth/create">Create Account</a></li>
-		</ul>`;
-	headerEle.appendChild(title);
-	headerEle.appendChild(authDiv);
-	return;
+function InitHeader() {
+	const headerEle = document.createElement("div");
+	headerEle.id = "header";
+	headerEle.innerHTML = `
+		<div class="logo"></div>
+		<div id="auth-section" class="hide"></div>
+		<div id="user-dropdown" class="hide"></div>
+	`;
+	document.body.appendChild(headerEle);
 };
 
 export {
-	BuildHeader
+	InitHeader
 };

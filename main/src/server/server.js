@@ -10,7 +10,6 @@ const app = express();
 const port = 6003;
 const router = express.Router();
 
-
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 // Serve static images
@@ -22,8 +21,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: { 
-	secure: true,
-	sameSite: 'none'
+	secure: false,
+	sameSite: 'lax'
   }
 }));
 

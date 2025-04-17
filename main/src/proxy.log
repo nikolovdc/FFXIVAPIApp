@@ -1,29 +1,11 @@
-2025/04/10 10:27:22 Authorizing with the credentials file at "./server/key.json"
-2025/04/10 10:27:22 [rich-chimera-455016-u7:us-central1:root] Listening on 127.0.0.1:3306
-2025/04/10 10:27:22 The proxy has started successfully and is ready for new connections!
-2025/04/10 10:27:46 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:34190
-2025/04/10 10:34:19 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 10:38:19 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:33858
-2025/04/10 10:55:03 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 10:55:13 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:47892
-2025/04/10 10:56:36 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 10:56:44 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:38904
-2025/04/10 10:58:49 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 10:58:56 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:34332
-2025/04/10 11:00:19 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:00:27 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:46354
-2025/04/10 11:03:27 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:03:42 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:38666
-2025/04/10 11:06:50 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:07:00 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:48676
-2025/04/10 11:09:54 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:10:02 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:56096
-2025/04/10 11:11:09 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:13:14 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:54896
-2025/04/10 11:26:24 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:26:32 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:48434
-2025/04/10 11:36:23 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 11:54:21 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:46666
-2025/04/10 12:11:16 [rich-chimera-455016-u7:us-central1:root] client closed the connection
-2025/04/10 12:13:59 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:54572
-2025/04/10 12:17:16 [rich-chimera-455016-u7:us-central1:root] client closed the connection
+2025/04/17 10:54:34 Authorizing with the credentials file at "./server/key.json"
+2025/04/17 10:54:35 [rich-chimera-455016-u7:us-central1:root] Listening on 127.0.0.1:3306
+2025/04/17 10:54:35 The proxy has started successfully and is ready for new connections!
+2025/04/17 10:55:02 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:56310
+2025/04/17 11:01:28 [rich-chimera-455016-u7:us-central1:root] client closed the connection
+2025/04/17 11:02:20 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:48450
+2025/04/17 11:07:45 [rich-chimera-455016-u7:us-central1:root] client closed the connection
+2025/04/17 11:08:02 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:44906
+2025/04/17 11:11:01 [rich-chimera-455016-u7:us-central1:root] client closed the connection
+2025/04/17 11:11:32 [rich-chimera-455016-u7:us-central1:root] accepted connection from 127.0.0.1:34136
+2025/04/17 11:16:28 [rich-chimera-455016-u7:us-central1:root] client closed the connection

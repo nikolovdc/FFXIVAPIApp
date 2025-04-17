@@ -1,4 +1,11 @@
 // components/modal.js
+import { ToggleDisplay } from "./displayUtil.js";
+
+function InitModal() {
+	const modalDiv = document.createElement("div");
+	modalDiv.id = "modal-overlay";
+	document.body.appendChild(modalDiv);
+};
 
 /**  
  * BuildModal
@@ -69,7 +76,7 @@ function BuildModal({ size = "small", className, title, onClose, closeBut = "x",
 	} else {
 		console.log("This is the button: ", modalCloseBut);
 		modalCloseBut.onclick = () => {
-			ToggleModalDisplay(size, className, false)
+			ToggleDisplay(selectorQuery, false);
 		};
 	}
 	modalCloseBut.append(closeBut);
@@ -97,23 +104,10 @@ function BuildModal({ size = "small", className, title, onClose, closeBut = "x",
 			modalCancelBut.style.display = "none";
 		}
 	}
-	ToggleModalDisplay(size, className, true);
-};
-
-function ToggleModalDisplay(size = 'small', className = '', onShow = 'false') {
-	console.log("Triggered");
-	const selector = `.modal-container.${size}${className ? '.' + className : ''}`;
-	const modal = document.querySelector(selector);
-	if (onShow) {
-		document.body.style.overflow = 'hidden';
-		modal.style.display = "block";
-	} else {
-		document.body.style.overflow = '';
-		modal.style.display = "none";
-	}
+	ToggleDisplay(selectorQuery, true);
 };
 
 export {
-	BuildModal,
-	ToggleModalDisplay
+	InitModal,
+	BuildModal
 };

@@ -1,14 +1,12 @@
 // src/server/controllers/authControllers.js
-const secretKey = process.env.JWT_SECRET || 'default_key';
 const { passQuery } = require('../utils/queryUtils');
 const { hashPassword, comparePassword } = require('../utils/passwordUtils');
-const { checkIfUserExists, setUser } = require('../utils/userUtils');
-
+const { setUser } = require('../utils/userUtils');
 //Helper function
 async function createNewUser(accountName, password, email, res) {
   try {
 	const hashedPW = await hashPassword(password);
-	const results = await passQuery(
+	await passQuery(
 	  `INSERT INTO user (username, password, email) VALUES (?, ?, ?)`,
 	  [accountName, hashedPW, email]
 	);
@@ -34,8 +32,9 @@ const userLogin = async (req, res) => {
 	  return res.status(401).json({ error: 'Password are wrong.' });
 	}
 	// Generate a JWT token and store the user in session
+	
 	setUser(req, user);
-	return res.redirect('/main');						
+	return res.redirect('/');						
   } catch (error) {
 	console.error('Login error: ', error);
 	return res.status(500).json({ error: 'Internal server error' });
