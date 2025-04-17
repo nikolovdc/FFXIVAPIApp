@@ -9,6 +9,7 @@ const getUserFromSession = (req) => {
 
 const setTokenInSession = (req, token) => {
 	req.session.token = token;
+	console.log(req.session);
 };
 
 const setUserInSession = (req, user) => {

@@ -12,6 +12,13 @@ body {
    font-family: apple;
 }
 
+#main-contents {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
 #header {
     width: 100%;
     font-size: larger;
@@ -21,12 +28,13 @@ body {
     margin: 0px;
     padding: 5px 5px 0px 20px;
     display: inline-flex;
+    height: auto;
 }
 
-#signin {
+#auth-section {
     font-size: large;
     margin-top: 50px;
-    position: absolute;
+    position: relative;
     right: 0px;
     padding-left: 10px;
     padding-right: 10px;
@@ -55,6 +63,7 @@ li a:hover{
 
 #nav {
     font-size: larger;
+	width: 100%;
     background-color: #dce5d3;
     padding: 10px;
 }
@@ -202,4 +211,11 @@ button[type=submit] {
 
 .addBtn:hover {
     background-color: #bbb;
+}
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: unset;
 }
