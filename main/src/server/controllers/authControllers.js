@@ -1,9 +1,17 @@
 // src/server/controllers/authControllers.js
 const { passQuery } = require('../utils/queryUtils');
 const { hashPassword, comparePassword } = require('../utils/passwordUtils');
-const { setUser } = require('../utils/userUtils');
-//Helper function
-async function createNewUser(accountName, password, email, res) {
+const { setUser } = require('../helpers/userHelpers');
+
+/**
+ * 
+ * @param {string} accountName 
+ * @param {string} password 
+ * @param {string} email 
+ * @param {*} res 
+ * @returns 
+ */
+const createNewUser = async (accountName, password, email, res) => {
   try {
 	const hashedPW = await hashPassword(password);
 	await passQuery(
@@ -17,7 +25,13 @@ async function createNewUser(accountName, password, email, res) {
   } 
 };
 
-const userLogin = async (req, res) => {
+/**
+ * userLogin
+ * @param {*} req 
+ * @param {*} res 
+ * @returns 
+ */
+async function userLogin(req, res) {
   const { email, password } = req.body;
   try {
 	const results = await passQuery('SELECT * FROM user WHERE email = ?', [email]);	
@@ -29,19 +43,26 @@ const userLogin = async (req, res) => {
 	if (typeof user.password !== "string") hashed_password = user.password.toString(); 
 	const isMatch = await comparePassword(password, hashed_password);
 	if (!isMatch) {
-	  return res.status(401).json({ error: 'Password are wrong.' });
+	  return res.status(412).json({ error: 'Password are wrong.' });
 	}
 	// Generate a JWT token and store the user in session
 	
 	setUser(req, user);
-	return res.redirect('/');						
+	return res.status(200);						
   } catch (error) {
 	console.error('Login error: ', error);
 	return res.status(500).json({ error: 'Internal server error' });
   }
 };
 
-const userRegister = async (req, res) => {
+/**
+ * userRegister
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @returns 
+ */
+async function userRegister(req, res) {
   const { username, password, email } = req.body;
   const currentDate = new Date();
   const registeredDate = currentDate.toISOString().slice(0, 10);

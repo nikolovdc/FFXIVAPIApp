@@ -20,7 +20,6 @@ const keyLocal = (key) => {
 	return localStorage.key(key);
 };
 
-
 export {
 	setLocal,
 	removeLocal,

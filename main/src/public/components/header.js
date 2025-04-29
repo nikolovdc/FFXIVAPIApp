@@ -1,9 +1,12 @@
-// src/components/header.js
+// public/components/header.js
 
 /**
- * BuildHeader 
- * Builds a consistent header, include logo, 
- * auth section, and user icon.  
+ * InitHeader 
+ * Initiate header in html, include:
+ * logo, 
+ * title,
+ * auth section, 
+ * user icon.
  */
 function InitHeader() {
 	const headerEle = document.createElement("div");

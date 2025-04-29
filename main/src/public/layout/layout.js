@@ -5,6 +5,7 @@ import { InitModal } from '../components/modal.js';
 import { InitNav } from '../components/nav.js';
 import { BuildAuthSection } from '../components/auth.js';
 import { BuildUserDropdown } from '../components/userDropdown.js';
+import { InitTaskList } from '../components/tasklist.js';
 /**
  * LayoutMain
  * builds the layout of the main page 
@@ -14,9 +15,9 @@ function LayoutMain() {
 	InitNav();
 	InitModal();
 	InitMainContents();
+	InitTaskList();
 	InitFooter();
-	const headerEle = document.getElementById('header');
-    BuildAuthSection(headerEle);
+    BuildAuthSection();
     BuildUserDropdown();
 };
 

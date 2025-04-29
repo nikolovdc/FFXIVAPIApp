@@ -9,12 +9,19 @@ function InitModal() {
 
 /**  
  * BuildModal
- * 
+ * Adopt model similar to React framework, 
+ * BuildModal should accept an object as param and build the modal based on input
+ * @param {Object} input: { enum size(small, medium, large), string className, \
+ * 						    string title, function onClose, string || node closeBut, \
+ * 							string || node children, function onConfirm, \
+ * 							string || node confirmBut, function onCancel, \
+ * 							string || node cancelBut }
  */
 function BuildModal({ size = "small", className, title, onClose, closeBut = "x", 
 					  children, onConfirm, confirmBut, onCancel, cancelBut }) {
 	
-	let modal, modalHeader, modalBody, modalFooter, t1, modalCloseBut, modalConfirmBut, modalCancelBut;
+	let modal, modalHeader, modalBody, modalFooter, t1, 
+	modalCloseBut, modalConfirmBut, modalCancelBut;
 
 	const overlayDiv = document.getElementById("modal-overlay");
 	const selectorName = `modal-container ${size} ${className || ''}`.trim();

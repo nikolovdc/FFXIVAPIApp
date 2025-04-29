@@ -3,13 +3,13 @@ import api from './config/apiConfig.js';
 	
 /**
  * loginValidate - POST FUNCTION to handle user login validation
- * @param { string } accountName - used to validate user's account name
- * @param { string } pw - used to validate user's password
- * @return { Promise<Object> || Error } Return user data or throw errors accordingly
+ * @param {string} email - used to validate user's account name
+ * @param {string} password - used to validate user's password
+ * @return {Promise<Object>|Error} Return user data or throw errors accordingly
  */
 const loginValidate = async (email, password) => {
   try {
-	const response = await api.post('/auth/login', { email, password });
+	const response = await api.patch('/auth/login', { email, password });
 	if (response.data) {
 	  return response.data;
 	} else {
@@ -22,8 +22,8 @@ const loginValidate = async (email, password) => {
 
 /**
  * registerUser - POST FUNCTION to handle user registration
- * @param { Object } newUser - contains all input information
- * @return { Promise<Object> || Error } Return user data or throw errors accordingly
+ * @param {object} newUser - contains all input information
+ * @return {Promise<object>|Error} Return user data or throw errors accordingly
  */
 const registerUser = async (newUser) => {
   const username = newUser.username;

@@ -1,6 +1,6 @@
 // public/components/auth.js
 
-function BuildAuthSection(headerEle) {
+function BuildAuthSection() {
 	const authDiv = document.getElementById("auth-section");
 	authDiv.innerHTML = `
 		<ul>

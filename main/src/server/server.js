@@ -5,15 +5,23 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const multer = require('multer');
 
+const dbConnect = require('../database/dbConnect');
+const authMiddleware = require("./middleware/authMiddleware");
 const routes = require('./routes');
+
 const app = express();
 const port = 6003;
-const router = express.Router();
+
+// Connect to the database
+dbConnect();
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 // Serve static images
 app.use('/uploads', express.static("uploads"));
+
+// Enable CORS for all routes
+app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
 
 // Set up session
 app.use(session({
@@ -21,8 +29,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: { 
-	secure: false,
-	sameSite: 'lax'
+	  secure: false,
+	  sameSite: 'lax'
   }
 }));
 
@@ -40,11 +48,8 @@ const upload = multer({ storage: storage });
 
 app.use(bodyParser.json()); // Parse JSON bodies
 
-// Enable CORS for all routes
-app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
-
 // Mount routes
-app.use('/', routes);
+app.use('/', authMiddleware, routes);
 
 app.listen(port, () => {
 	console.log(`Server is running on port: ${port}`);
