@@ -1,7 +1,12 @@
 // server/controllers/userControllers.js
-const { getTokenFromSession } = require('../utils/sessionUtils');
-const { verifyToken } = require('../utils/tokenUtils');
 
+
+/**
+ * getUserName
+ * @param {*} req 
+ * @param {*} res 
+ * @returns 
+ */
 const getUserName = async (req, res) => {
   try {
 	if (!req.username) {

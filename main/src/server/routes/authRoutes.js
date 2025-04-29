@@ -8,8 +8,8 @@ const { userLogin, userRegister } = require('../controllers/authControllers');
 
 app.use(cors({ origin: 'http://localhost:6003' }));
 
-// POST Route to handle customer login requests
-router.post('/login', userLogin); 
+// PATCH Route to handle customer login requests
+router.patch('/login', userLogin); 
 
 // POST Route to handle customer register requests
 router.post('/create', userRegister);

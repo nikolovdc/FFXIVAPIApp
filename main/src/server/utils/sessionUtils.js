@@ -4,16 +4,23 @@ const getTokenFromSession = (req) => {
 };
 
 const getUserFromSession = (req) => {
-	return req.session.user || null;
+	return req.session.username || null;
 };
 
 const setTokenInSession = (req, token) => {
 	req.session.token = token;
-	console.log(req.session);
 };
 
-const setUserInSession = (req, user) => {
-	req.session.user = user;
+const setUserInSession = (req, username) => {
+	console.log("Setting user in session: ", username);
+	req.session.username = username;
+	console.log("Req session is set: ", req.session);
+	req.session.save((err) => {
+        if (err) {
+            console.error('Session save error:', err);
+        }
+    });
+	console.log("Req session is set: ", req.session);
 };
 
 const clearSession = (req) => {

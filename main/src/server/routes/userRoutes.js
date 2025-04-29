@@ -8,6 +8,7 @@ const { getUserName } = require('../controllers/userControllers');
 
 app.use(cors({ origin: 'http://localhost:6003' }));
 
+// GET route that get user name
 router.get('/name', getUserName);
 
 module.exports = router;
