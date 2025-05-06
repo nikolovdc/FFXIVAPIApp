@@ -20,12 +20,12 @@ function saveLocalMaps(mapArray) {
 };
 
 /**
- * addLocalTask
+ * addLocalMap
  * Add a task to localStorage
  * @param {object} mapObject
  */
 function addLocalMap(mapObject) {
-    const currentMaps = getLocalMaps();
+    const currentMaps = getAllLocalMaps();
     currentMaps.push(mapObject);
     saveLocalMaps(currentMaps);
 };
@@ -34,7 +34,7 @@ function addLocalMap(mapObject) {
  * getLocalMap
  */
 function getLocalMap(row_id) {
-    const map = getAllLocalMaps().find(map => map.row_id === row_id);
+    const map = getAllLocalMaps().find(map => map.row_id == row_id);
     return map;
 }
 
@@ -115,4 +115,6 @@ export {
     getLocalSelectHTML,
     saveLocalSelectHTML,
     getLocalMap,
+    cacheNewMap,
+    cacheMapSelect,
 };

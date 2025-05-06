@@ -2,13 +2,16 @@
 
 async function listAllMapRowID(req, res) {
     try {
-        let { limit } = req.query;
+        let { limit, after } = req.query;
+        if (after === undefined || isNaN(parseInt(after, 10))) {
+            after = 1;
+        }
         limit = parseInt(limit, 10);
         if (isNaN(limit) || limit <= 0) {
             return res.status(400).json({ error: "Invalid 'limit' query parameter." });
         }
         const response = 
-            await fetch(`https://v2.xivapi.com/api/sheet/Map?limit=${limit}&after=1`);
+            await fetch(`https://v2.xivapi.com/api/sheet/Map?limit=${limit}&after=${after}`);
         const data = await response.json();
         res.status(200).json(data.rows);        
     } catch (error) {

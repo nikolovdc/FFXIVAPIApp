@@ -8,9 +8,8 @@
  */
 function CreateOption(name, row_id) {
     const option = document.createElement('option');
-    option.value = name;
+    option.value = row_id;
     option.textContent = name;
-    option.setAttribute("data-id", row_id);
     return option;
 };
 
@@ -20,12 +19,15 @@ function CreateOption(name, row_id) {
  * @param {string} selectDivInnerHTML 
  * @param {function} changeHandler 
  */
-function InitSelect(selectDiv_id, selectDivInnerHTML, changeHandler) {
+function InitSelect(selectDiv_id, children = []) {
     const mainSection = document.getElementById("main-contents");
     const selectDiv = document.createElement("div");
     selectDiv.id = selectDiv_id;
-    selectDiv.innerHTML = selectDivInnerHTML;
-    selectDiv.addEventListener("change", changeHandler);
+    children.forEach(child => {
+        if (child instanceof HTMLElement) {
+            selectDiv.appendChild(child);
+        }
+    });
     mainSection.appendChild(selectDiv);
 };
 
