@@ -4,102 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../main.css">
   <title>FFXIV Map Viewer</title>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="../services/apiServices.js" type="module"></script>
+  <script src="../layout/layout.js" type="module"></script>
+  <script src="../panels/mapPanel.js" type="module"></script>
 </head>
-
 <body>
-  <div id="header">
-    <h1> <a href="/">FFXIV Guide</a></h1>
-    <div id="signin">
-      <ul>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/create">Create Account</a></li>
-      </ul>
-    </div>
-  </div>
-  <div id="nav">
-    <li><a href="/tasks">Tasks</a></li>
-    <li><a href="/quests">Quests</a></li>
-    <li><a href="/items">Items</a></li>
-    <li><a href="/locations">Map Locations</a></li>
-    <li><a href="/profile">View Profile</a></li>
-  </div>
-
-    <h1>FFXIV Map Viewer</h1>
-    <label for="mapSelect">Select a map:</label>
-    <select name="maps" id="mapSelect"></select>
-    <div id="mapImg"></div>
-    <script type="module">
-
-      async function getMapList() {
-        try {
-          /* const options = {method: 'GET',
-          url: `https://v2.xivapi.com/sheet/Map?columns=ID,MapFilename,PlaceName.Name`}; */
-          const response = await axios.get('/xiv/map');
-          
-          return response.data;
-        } catch (error) {
-          console.error("Error fetching map list:", error);
-          return [];
-        }
-      }
-
-      async function fetchMapImage() {
-        try {
-          const response = await axios.get(`/xiv/map`, 
-          { responseType: 'blob' });
-          const blob = response.data;
-          const imageURL = URL.createObjectURL(blob);
-
-          const image = document.createElement('img');
-          image.src = imageURL;
-          image.style.width = '1000px';
-          document.getElementById('mapImg').appendChild(image);
-        } catch (error) {
-          console.error("Error fetching map image:", url, error);
-        }
-      }
-
-      //fetchMapImage('s1d1', '00');
-
-      (async () => {
-        const maps = await getMapList();
-        for (const map of maps) {
-          if (!map.PlaceName?.Name) {
-            continue;
-          }
-
-          const select = document.getElementById('mapSelect');
-          const option = document.createElement('option');
-          option.value = JSON.stringify({name: map.PlaceName.Name});
-          option.textContent = map.PlaceName.Name;
-          select.appendChild(option);
-
-          const mapFileName = map.MapFilename;
-          const wrapper = document.createElement('div');
-          wrapper.style.margin = "10px";
-
-          /* const parts = mapFileName.split('/');
-          if (parts.length >= 3) {
-            const territoryId = parts[2];
-            const fileName = parts[3]; 
-            const match = fileName.match(/\.(\d+)\.jpg$/); 
-            const index = match ? match[1] : "00";
-            console.log(`Using territoryId: ${territoryId}, index: ${index}`); */
-
-
-            const mapTitle = document.createElement('h2');
-            mapTitle.textContent = map.PlaceName?.Name || "Unknown";
-            wrapper.appendChild(mapTitle);
-            document.getElementById('mapImg').appendChild(wrapper);
-
-            await fetchMapImage();
-        }
-      })();
-      
-    </script>
-  </body>
+</body>
 </html>

@@ -8,7 +8,6 @@ const { getTokenFromSession } = require('../utils/sessionUtils.js');
 const authMiddleware = async (req, res, next) => {
   const token = getTokenFromSession(req);
   if (!token) {
-	console.log('No user found, creating guest user.');
 	return next();
   } else {
 	try {
