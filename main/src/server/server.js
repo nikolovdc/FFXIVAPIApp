@@ -8,7 +8,6 @@ const multer = require('multer');
 const routes = require('./routes');
 const app = express();
 const port = 6003;
-const router = express.Router();
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -45,6 +44,7 @@ app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
 
 // Mount routes
 app.use('/', routes);
+
 
 app.listen(port, () => {
 	console.log(`Server is running on port: ${port}`);
