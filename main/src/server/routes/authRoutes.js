@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/routes/authRoutes.js
 const express = require('express');
 const cors = require('cors');
@@ -6,7 +7,7 @@ const router = express.Router();
 
 const { userLogin, userRegister } = require('../controllers/authControllers');
 
-app.use(cors({ origin: 'http://localhost:6003' }));
+app.use(cors({ origin: 'https://ffxiv-api-app-150199820340.us-central1.run.app' }));
 
 // POST Route to handle customer login requests
 router.post('/login', userLogin); 

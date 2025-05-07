@@ -1,19 +1,24 @@
-const mysql = require('mysql2');
+/* eslint-disable no-undef */
+const mysql = require("mysql2");
 
-const db = mysql.createConnection({
-	host: "127.0.0.1",
-	user: "root",
-	password: "root6666",
-	port: 3306,
-	database: "login"
+const db = mysql.createPool({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  socketPath: process.env.DB_SOCKET_PATH, // e.g., /cloudsql/project:region:instance
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
-db.connect( (error) => {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log("MySQL is connected!!!");
-	}
+// Optional: test the connection
+db.getConnection((err, conn) => {
+  if (err) {
+    console.error("❌ MySQL connection error:", err);
+  } else {
+    console.log("✅ MySQL connected via pool!");
+    conn.release();
+  }
 });
 
 module.exports = db;

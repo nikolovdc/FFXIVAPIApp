@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // src/server/server.js
 const express = require('express');
 const session = require('express-session');
@@ -7,7 +9,8 @@ const multer = require('multer');
 
 const routes = require('./routes');
 const app = express();
-const port = 6003;
+const port = process.env.PORT || 6003;
+
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -35,12 +38,11 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage: storage });
 
 app.use(bodyParser.json()); // Parse JSON bodies
 
 // Enable CORS for all routes
-app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
+app.use(cors({ origin: 'https://ffxiv-api-app-150199820340.us-central1.run.app', credentials: true }));
 
 // Mount routes
 app.use('/', routes);

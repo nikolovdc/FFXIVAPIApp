@@ -1,6 +1,5 @@
 import { 
         getAllLocalMaps, 
-        getLocalSelectHTML,
         cacheNewMap,
         cacheMapSelect 
     } from '../../utils/apiUtils.js';

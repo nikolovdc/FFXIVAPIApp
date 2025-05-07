@@ -1,0 +1,86 @@
+.tasklist-init {
+    margin: 20px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+}
+
+#tasklist-container {
+    background-color: #d0ebef;
+    opacity: 0.8;
+    margin: 10px;
+    bottom: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* button used to open task list */
+.tasklist-display-button {
+    display: block;
+    position: fixed;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color:#b5e0e6;
+    width: 40px;
+    opacity: 0.8;
+    bottom: 10px;
+    right: 40px; 
+}
+
+#tasklist-container.hide {
+    display: none;
+}
+
+.tasklist-add-task-icon {
+    margin: 10px;
+}
+
+.taskList li:hover {
+    background: #ddd;
+}
+
+.taskList li.checked {
+    background: lightblue;
+}
+
+.taskList li.checked > .taskText {
+    text-decoration: line-through;
+}
+
+.taskText {
+    flex-grow: 1;
+    pointer-events: none;
+}
+
+.taskList li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 14px;
+    right: 40px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+#tasklist-container input {
+    margin: 0px;
+    width: 50%;
+    border: 2px solid #bec3c6;
+    border-radius: 0;
+    padding: 20px;
+    float: top;
+    font-size: 16px;
+}
+
+.tasklist-add-task-enter {
+    margin: 25px 0px 0px 10px;
+}
+

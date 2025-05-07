@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/middleware/authMiddleware.js
 const { verifyToken } = require('../utils/tokenUtils.js');
 const { getTokenFromSession } = require('../utils/sessionUtils.js');

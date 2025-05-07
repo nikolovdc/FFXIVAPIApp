@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { exec, execSync } = require('child_process');
 
 /**
@@ -29,6 +30,7 @@ function isProxyRunningWindows() {
 	console.log("This is the output of whether proxy is running: ", output);
 	return output.length > 0;
   } catch (error) {
+	console.log(error);
     return false; // No process found
   }
 };
@@ -55,7 +57,6 @@ function stopProxy() {
   try {
 	let pid = getProxyPID();
 	if (typeof pid !== 'number') pid = parseInt(pid);
-	const output = execSync(`kill -9 ${pid}`);
   } catch (error) {
 	console.error("Kill failed: ", error);
   }

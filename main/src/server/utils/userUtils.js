@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // src/server/utils/userUtils.js
 const { getTokenFromSession, setTokenInSession, setUserInSession } = require('./sessionUtils');
 const { createToken, verifyToken } = require('./tokenUtils');

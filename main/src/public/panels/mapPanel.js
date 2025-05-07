@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // public/panels/mapPanel.js
 import { UpdateMapImage } from "../components/map.js";
 import { InitSelect } from "../components/select.js";
