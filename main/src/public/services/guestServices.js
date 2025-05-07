@@ -1,6 +1,5 @@
 import { getLocal, setLocal } from '../utils/localUtils.js';
 
-
 /**
  * 
  * @param {*} error 
