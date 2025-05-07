@@ -1,18 +1,18 @@
-steps:
+asteps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', '-t',
-      'us-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp', './main'
+      'us-central1-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp', './main'
     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [
-      'push', 'us-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp'
+      'push', 'us-central1-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp'
     ]
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: [
       'run', 'deploy', 'ffxiv-api-app',
-      '--image', 'us-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp',
+      '--image', 'us-central1-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp',
       '--add-cloudsql-instances', 'rich-chimera-455016-u7:us-central1:root',
       '--set-env-vars', 'DB_USER=root,DB_PASS=root6666,DB_NAME=login,DB_SOCKET_PATH=/cloudsql/rich-chimera-455016-u7:us-central1:root',
       '--region', 'us-central1',
