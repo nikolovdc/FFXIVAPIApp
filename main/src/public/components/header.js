@@ -9,7 +9,9 @@ function InitHeader() {
 	const headerEle = document.createElement("div");
 	headerEle.id = "header";
 	headerEle.innerHTML = `
-		<div class="logo"></div>
+		<div class="logo">
+ 		<h1><a href="/">FFXIV Guide</a></h1>
+ 		</div>
 		<div id="auth-section" class="hide"></div>
 		<div id="user-dropdown" class="hide"></div>
 	`;

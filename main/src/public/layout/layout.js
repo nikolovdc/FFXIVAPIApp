@@ -5,7 +5,10 @@ import { InitModal } from '../components/modal.js';
 import { InitNav } from '../components/nav.js';
 import { BuildAuthSection } from '../components/auth.js';
 import { BuildUserDropdown } from '../components/userDropdown.js';
-import { lazyLoadMaps, loadLocationSelectHTML } from '../services/apiServices/mapServices.js';
+import { lazyLoadMaps, loadLocationSelectHTML } from '../services/apiServices/mapServices.js'
+import { InitTaskList } from '../components/tasklist.js';
+import { InitMainIntro } from '../components/mainIntro.js';
+;
 /**
  * LayoutMain
  * builds the layout of the main page 
@@ -17,7 +20,9 @@ function LayoutMain() {
 	InitHeader();
 	InitNav();
 	InitModal();
+	InitMainIntro();
 	InitMainContents();
+	InitTaskList();
 	InitFooter();
 	const headerEle = document.getElementById('header');
     BuildAuthSection(headerEle);
