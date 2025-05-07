@@ -2,10 +2,11 @@ const jwt = require('jsonwebtoken');
 const secretKey = process.env.SECRET_KEY || 'default_key';
 
 const createToken= (username, user_id) => {
-	return jwt.sign({
+	if (username && user_id) 
+		return jwt.sign({
 		  username: username,
 		  user_id: user_id
-	},
+		},
 		secretKey,
 	{ expiresIn: '1h' });
 };
@@ -16,15 +17,15 @@ const createToken= (username, user_id) => {
 * @return { Object } Decoded User
 */
 const verifyToken = (token) => {
-	return new Promise((resolve, reject) => {
-		jwt.verify(token, secretKey, (err, decoded) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve(decoded);
-			}
-		});
-	});
+	try {
+		if (token)
+			return jwt.verify(token, secretKey);
+		else {
+			return null;
+		}
+	} catch(error) {
+		return null;
+	}
 };
 module.exports = {
 	createToken,

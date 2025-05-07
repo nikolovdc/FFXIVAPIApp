@@ -1,6 +1,5 @@
 import { getLocal, setLocal } from './localUtils.js';
 
-
 const createGuest = async () => {	
   const guest = getLocal('guest');
   if (!guest) {
