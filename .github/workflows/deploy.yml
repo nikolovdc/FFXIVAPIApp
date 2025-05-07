@@ -23,13 +23,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/rich-chimera-455016-u7/myapp ./main
-          docker push gcr.io/rich-chimera-455016-u7/myapp
+          docker build -t us-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp ./main
+          docker push us-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy ffxiv-api-app \
-            --image gcr.io/rich-chimera-455016-u7/myapp \
+            --imageus-docker.pkg.dev/rich-chimera-455016-u7/my-repo/myapp \
             --add-cloudsql-instances rich-chimera-455016-u7:us-central1:root \
             --set-env-vars DB_USER=root,DB_PASS=root6666,DB_NAME=login,DB_SOCKET_PATH=/cloudsql/rich-chimera-455016-u7:us-central1:root \
             --region=us-central1 \
