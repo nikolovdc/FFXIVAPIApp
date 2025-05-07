@@ -3,6 +3,7 @@ import { registerUser } from '../services/authServices.js';
 import { BuildModal } from '../components/modal.js';
 
 function InitRegisterForm() {
+	const authSection = document.getElementById("")
 	const mainContentDiv = document.getElementById("main-contents");
 	const formTitle = document.createElement("h2");
 	formTitle.textContent = "Create Account";

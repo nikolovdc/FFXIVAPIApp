@@ -1,11 +1,49 @@
-#tasks-container {
-    margin: 10px;
+.tasklist-init {
+    margin: 20px;
+    padding: 10px;
     position: fixed;
-    right: 0px;
     bottom: 0px;
+    right: 0;
 }
 
-.taskList li {
+
+
+#tasklist-container {
+    background-color: #d0ebef;
+    opacity: 0.8;
+    margin: 10px;
+    bottom: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* button used to open task list */
+.tasklist-display-button {
+    display: block;
+    position: fixed;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color:#b5e0e6;
+    width: 40px;
+    opacity: 0.8;
+    bottom: 10px;
+    right: 40px; 
+}
+
+#tasklist-container.hide {
+    display: none;
+}
+
+.tasklist-add-task-icon {
+    margin: 10px;
+}
+
+
+/* .taskList li {
     margin: 10px 0px;
     width: 20%;
     padding: 12px 8px;
@@ -16,7 +54,7 @@
     justify-content: space-between;
     position: relative;
     cursor: pointer;
-}
+} */
 
 .taskList li:hover {
     background: #ddd;
@@ -50,15 +88,19 @@
 
 #tasklist-container input {
     margin: 0px;
-    width: 20%;
-    border: none;
+    width: 50%;
+    border: 2px solid #bec3c6;
     border-radius: 0;
     padding: 20px;
     float: top;
     font-size: 16px;
 }
 
-#tasklist-container img {
+.tasklist-add-task-enter {
+    margin: 25px 0px 0px 10px;
+}
+
+/* #tasklist-container img {
     padding: 10px;
     background: #d9d9d9;
     color: #555;
@@ -67,8 +109,8 @@
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
-}
+} */
 
-#tasklist-container img:hover {
+/* #tasklist-container img:hover {
     background-color: #bbb;
-}
+} */

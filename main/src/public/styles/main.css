@@ -35,7 +35,8 @@ body {
     font-size: large;
     margin-top: 50px;
     position: relative;
-    right: 0px;
+    left: 1000px;
+    right: 10px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
@@ -121,9 +122,16 @@ button[type=submit] {
 }
 
 .hide {
+    margin: 20px;
+
     display: none !important;
 }
 
 .show {
-    display: unset;
+    margin: 20px;
+
+    display: block;
 }
+
+
+
