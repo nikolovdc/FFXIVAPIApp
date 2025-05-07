@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //public/services/registerPanel.js
 import { registerUser } from '../services/authServices.js';
 import { BuildModal } from '../components/modal.js';

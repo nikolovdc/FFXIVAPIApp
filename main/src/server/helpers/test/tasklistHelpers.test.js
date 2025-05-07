@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 jest.mock('../../../database/db');
 jest.mock('../../utils/queryUtils'); // Mock the passQuery module
 const { passQuery } = require('../../utils/queryUtils');

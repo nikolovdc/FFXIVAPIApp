@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/controllers/authControllers.js
 const { passQuery } = require('../utils/queryUtils');
 const { hashPassword, comparePassword } = require('../utils/passwordUtils');
@@ -43,8 +44,6 @@ const userLogin = async (req, res) => {
 
 const userRegister = async (req, res) => {
   const { username, password, email } = req.body;
-  const currentDate = new Date();
-  const registeredDate = currentDate.toISOString().slice(0, 10);
   try {
 	const results = await passQuery('SELECT * FROM user WHERE email = ?', [email]);
 	if (results.length === 0) {

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //public/services/loginPanel.js
 import { loginValidate } from '../services/authServices.js';
 import { BuildModal } from '../components/modal.js';

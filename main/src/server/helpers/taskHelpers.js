@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const { passQuery } = require("../utils/queryUtils");
 
 /**

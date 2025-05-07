@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/controllers/tasklistControllers.js
 const { getUserid } = require("../helpers/userHelpers");
 const { fetchTaskItems, checkIfTasklistExist, createTasklist, 

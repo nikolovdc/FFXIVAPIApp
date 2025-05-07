@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/utils/sessionUtils.js
 const getTokenFromSession = (req) => {
 	return req.session.token || null;

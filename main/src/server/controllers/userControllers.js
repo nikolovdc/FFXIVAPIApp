@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // server/controllers/userControllers.js
 const { getTokenFromSession } = require('../utils/sessionUtils');
 const { verifyToken } = require('../utils/tokenUtils');

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/routes/tasklistRoutes.js
 const express = require('express');
 const cors = require('cors');

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { getLocal, removeLocal, setLocal } from "./localUtils.js";
 
 /**

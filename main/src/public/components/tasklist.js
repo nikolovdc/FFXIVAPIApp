@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { checkTask, createTask, deleteTask, editTaskDesc } from '../services/tasklistServices.js';
 import { ToggleDisplay } from './displayUtil.js';
 

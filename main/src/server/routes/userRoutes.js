@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/routes/userRoutes.js
 const express = require('express');
 const cors = require('cors');

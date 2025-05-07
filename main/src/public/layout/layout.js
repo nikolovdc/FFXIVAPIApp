@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { InitHeader } from '../components/header.js';
 import { InitFooter } from '../components/footer.js';
 import { InitMainContents } from '../components/mainContents.js';

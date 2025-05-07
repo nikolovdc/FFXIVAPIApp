@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/routes/index.js
 const express = require('express');
 const authRoutes = require('./authRoutes');

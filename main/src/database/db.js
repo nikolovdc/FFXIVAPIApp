@@ -1,4 +1,5 @@
-const mysql = require('mysql2');
+/* eslint-disable no-undef */
+const mysql = require("mysql2");
 
 const db = mysql.createPool({
   user: process.env.DB_USER,

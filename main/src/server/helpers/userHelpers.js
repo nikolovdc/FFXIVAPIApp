@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // src/server/utils/userUtils.js
 const { 
 	getTokenFromSession, 

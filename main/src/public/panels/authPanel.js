@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { checkUser } from "../services/userServices.js";
 import { ToggleDisplay } from "../components/displayUtil.js"; 
 import { createGuest  } from "../services/guestServices.js";

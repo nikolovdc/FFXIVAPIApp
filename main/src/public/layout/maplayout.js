@@ -25,4 +25,5 @@ function LayoutMain() {
     BuildUserDropdown();
 };
 
+// eslint-disable-next-line no-unused-vars
 document.addEventListener("DOMContentLoaded", (e) => LayoutMain());

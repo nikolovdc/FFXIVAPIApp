@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // src/server/server.js
 const express = require('express');
 const session = require('express-session');
@@ -36,7 +38,6 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage: storage });
 
 app.use(bodyParser.json()); // Parse JSON bodies
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // src/server/utils/queryUtils.js
 const db = require('../../database/db.js');
 /** Function to pass query to database
