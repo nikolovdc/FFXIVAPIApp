@@ -4,7 +4,7 @@ const app = express();
 const router = express.Router();
 const { listAllMapRowID, getMap, getMapRow } = require('../controllers/apiControllers');
 
-app.use(cors({ origin: 'http://localhost:6003' }));
+app.use(cors({ origin: 'https://ffxiv-api-app-150199820340.us-central1.run.app' }));
 
 router.get('/locations', (req, res) => {
 	res.render('locations');
