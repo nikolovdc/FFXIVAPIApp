@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/rich-chimera-455016-u7/myapp .
+          docker build -t gcr.io/rich-chimera-455016-u7/myapp ./main
           docker push gcr.io/rich-chimera-455016-u7/myapp
 
       - name: Deploy to Cloud Run
