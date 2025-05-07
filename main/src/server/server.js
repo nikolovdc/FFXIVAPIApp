@@ -41,7 +41,7 @@ const upload = multer({ storage: storage });
 app.use(bodyParser.json()); // Parse JSON bodies
 
 // Enable CORS for all routes
-app.use(cors({ origin: 'http://localhost:6003', credentials: true }));
+app.use(cors({ origin: 'https://ffxiv-api-app-150199820340.us-central1.run.app', credentials: true }));
 
 // Mount routes
 app.use('/', routes);
